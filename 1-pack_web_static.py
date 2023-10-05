@@ -2,11 +2,6 @@ from fabric.api import local
 from datetime import datetime
 
 def do_pack():
-    """
-    Generates a .tgz archive from the contents of the web_static folder.
-    Returns:
-        Path to the archive if successful, None otherwise.
-    """
     try:
         # Create the 'versions' directory if it doesn't exist
         local("mkdir -p versions")
@@ -23,7 +18,7 @@ def do_pack():
         )
 
         # Create the .tgz archive using tar
-        local("tar -cvzf versions/{} web_static".format(archive_name))
+        local("tar -cvzf versions/{} web_static".format(archive_name), capture=False)
 
         # Return the path to the archive
         return "versions/{}".format(archive_name)
