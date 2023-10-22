@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Starts a Flask web app."""
 
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
