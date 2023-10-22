@@ -31,7 +31,7 @@ def python_with_text(text):
     replaces any underscores in <text> with slashes.
     """
     formatted_text = text.replace('_', ' ')
-    return "C {}".format(formatted_text)
+    return "Python {}".format(formatted_text)
 
 
 if __name__ == "__main__":
